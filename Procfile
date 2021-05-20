@@ -1,1 +1,1 @@
-web: gunicorn twitterproject.wsgi --log-file -
+web: gunicorn twitterProject.wsgi --log-file -
