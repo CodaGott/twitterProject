@@ -8,10 +8,14 @@
     <title>Twitter</title>
 </head>
 <body>
-    <h1>Welcome to Twitter</h1>
-    <hr>
+    <h1>Welcome to my twitter</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">tweet</button>
+    </form>
     {% for post in posts %}
-        <h3><a href="{% url 'post_index' post.body %}"></a></h3>
+        <h3>{{ post.body }}</h3>
         <small>{{ post.tweet_date }}</small>
     {% endfor %}
 </body>
